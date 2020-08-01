@@ -51,7 +51,7 @@ SELECT * FROM items WHERE name LIKE '%uniklo%';
 
 /* 4C.Buatlah sebuah query untuk menampilkan data items yang dilengkapi dengan data nama kategori di masing-masing items. Berikut contoh tampilan data yang ingin didapatkan */
 SELECT items.name, items.description, items.price, 
-items.stock, items.category_id, categories.name 
+items.stock, items.category_id, categories.name AS kategori
 FROM items 
 INNER JOIN categories 
 ON items.category_id=categories.id;
